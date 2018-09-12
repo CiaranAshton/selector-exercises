@@ -6,10 +6,17 @@
   "scripts": {
     "test": "jest --runInBand --bail"
   },
-  "keywords": ["redux", "selectors", "exercises"],
+  "keywords": [
+    "redux",
+    "selectors",
+    "exercises"
+  ],
   "author": "Dan Scotton",
   "license": "ISC",
   "devDependencies": {
     "jest": "^23.5.0"
+  },
+  "dependencies": {
+    "ramda": "^0.25.0"
   }
 }

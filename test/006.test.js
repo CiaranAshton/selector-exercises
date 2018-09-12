@@ -1,6 +1,6 @@
 describe('JT Vits', () => {
     describe('getProductsByBrand', () => {
-        it('returns products grouped by brand (lodash/groupBy or reduce)', () => {
+        it.skip('returns products grouped by brand (lodash/groupBy or reduce)', () => {
 
             const state = {
                 products: {

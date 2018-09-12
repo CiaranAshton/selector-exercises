@@ -1,6 +1,6 @@
 describe('JT Vits', () => {
     describe('getBasketTotal', () => {
-        it('returns the total cost of the products in the basket (reduce)', () => {
+        it.skip('returns the total cost of the products in the basket (reduce)', () => {
 
             const state = {
                 basket: {

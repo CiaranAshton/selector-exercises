@@ -1,6 +1,6 @@
 describe('JT Vits', () => {
     describe('getBasket', () => {
-        it('returns a list of products in the basket with their subtotals', () => {
+        it.skip('returns a list of products in the basket with their subtotals', () => {
 
             // new addition to the state tree: `basket`
             // - each key represents a product with the value

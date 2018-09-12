@@ -1,3 +1,5 @@
+const getProduct = require('../lib/003');
+
 describe('JT Vits', () => {
     describe('getProduct', () => {
         it('returns a specific product', () => {
