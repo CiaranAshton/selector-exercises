@@ -1,9 +1,8 @@
-const getProducts = require('../lib/001.js');
+const { getProducts } = require('../lib/001.js');
 
 describe('JT Vits', () => {
     describe('getProducts', () => {
         it('returns a list of products (map)', () => {
-
             const state = {
                 products: {
                     p001: {
@@ -11,7 +10,7 @@ describe('JT Vits', () => {
                         name: 'Vitabiotics Feroglobin 200ml',
                         brand: 'Vitabiotics',
                         price: 4.19,
-                        rating: { stars: 4.5, count: 21, },
+                        rating: { stars: 4.5, count: 21 },
                         inStock: true,
                     },
                     p002: {
@@ -45,9 +44,9 @@ describe('JT Vits', () => {
                         price: 5.29,
                         rating: { stars: 4.5, count: 16 },
                         inStock: true,
-                    }
-                }
-            }
+                    },
+                },
+            };
 
             expect(getProducts(state)).toEqual([
                 {
@@ -75,7 +74,7 @@ describe('JT Vits', () => {
                     name: 'Vitabiotics Feroglobin - 30 Capsules',
                     price: 5.29,
                 },
-            ])
-        })
+            ]);
+        });
     });
 });
