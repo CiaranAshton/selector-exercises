@@ -1,7 +1,8 @@
+const { getProductsByBrand } = require('../lib/selectors');
+
 describe('JT Vits', () => {
     describe('getProductsByBrand', () => {
-        it.skip('returns products grouped by brand (lodash/groupBy or reduce)', () => {
-
+        it('returns products grouped by brand (lodash/groupBy or reduce)', () => {
             const state = {
                 products: {
                     p001: {
@@ -9,7 +10,7 @@ describe('JT Vits', () => {
                         name: 'Vitabiotics Feroglobin 200ml',
                         brand: 'Vitabiotics',
                         price: 4.19,
-                        rating: { stars: 4.5, count: 21, },
+                        rating: { stars: 4.5, count: 21 },
                         inStock: true,
                     },
                     p002: {
@@ -60,17 +61,17 @@ describe('JT Vits', () => {
                         rating: null,
                         inStock: true,
                     },
-                }
-            }
+                },
+            };
 
             expect(getProductsByBrand(state)).toEqual({
-                'Vitabiotics': [
+                Vitabiotics: [
                     {
                         id: 'p001',
                         name: 'Vitabiotics Feroglobin 200ml',
                         brand: 'Vitabiotics',
                         price: 4.19,
-                        rating: { stars: 4.5, count: 21, },
+                        rating: { stars: 4.5, count: 21 },
                         inStock: true,
                     },
                     {
@@ -108,7 +109,7 @@ describe('JT Vits', () => {
                         inStock: true,
                     },
                 ],
-                'Floradix': [
+                Floradix: [
                     {
                         id: 'p002',
                         name: 'Floradix Liquid iron and vitamin formula 500ml',
@@ -118,7 +119,7 @@ describe('JT Vits', () => {
                         inStock: false,
                     },
                 ],
-                'Berocca': [
+                Berocca: [
                     {
                         id: 'p003',
                         name: 'Berocca Orange - 45 effervescent tablets',
@@ -127,9 +128,8 @@ describe('JT Vits', () => {
                         rating: { stars: 5, count: 21 },
                         inStock: true,
                     },
-                ]
-            })
-        })
+                ],
+            });
+        });
     });
 });
-

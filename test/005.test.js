@@ -1,7 +1,8 @@
+const { getBasketTotal } = require('../lib/selectors');
+
 describe('JT Vits', () => {
     describe('getBasketTotal', () => {
-        it.skip('returns the total cost of the products in the basket (reduce)', () => {
-
+        it('returns the total cost of the products in the basket (reduce)', () => {
             const state = {
                 basket: {
                     p002: 2,
@@ -13,7 +14,7 @@ describe('JT Vits', () => {
                         name: 'Vitabiotics Feroglobin 200ml',
                         brand: 'Vitabiotics',
                         price: 4.19,
-                        rating: { stars: 4.5, count: 21, },
+                        rating: { stars: 4.5, count: 21 },
                         inStock: true,
                     },
                     p002: {
@@ -47,11 +48,11 @@ describe('JT Vits', () => {
                         price: 5.29,
                         rating: { stars: 4.5, count: 16 },
                         inStock: false,
-                    }
-                }
-            }
+                    },
+                },
+            };
 
-            expect(getBasketTotal(state)).toEqual(39.77)
-        })
+            expect(getBasketTotal(state)).toEqual(39.77);
+        });
     });
 });

@@ -1,4 +1,4 @@
-const { getProducts } = require('../lib/001.js');
+const { getProducts } = require('../lib/selectors.js');
 
 describe('JT Vits', () => {
     describe('getProducts', () => {

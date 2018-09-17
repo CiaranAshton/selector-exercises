@@ -1,7 +1,8 @@
+const { getBasket } = require('../lib/selectors');
+
 describe('JT Vits', () => {
     describe('getBasket', () => {
-        it.skip('returns a list of products in the basket with their subtotals', () => {
-
+        it('returns a list of products in the basket with their subtotals', () => {
             // new addition to the state tree: `basket`
             // - each key represents a product with the value
             //   representing the quantity of that product.
@@ -16,7 +17,7 @@ describe('JT Vits', () => {
                         name: 'Vitabiotics Feroglobin 200ml',
                         brand: 'Vitabiotics',
                         price: 4.19,
-                        rating: { stars: 4.5, count: 21, },
+                        rating: { stars: 4.5, count: 21 },
                         inStock: true,
                     },
                     p002: {
@@ -50,9 +51,9 @@ describe('JT Vits', () => {
                         price: 5.29,
                         rating: { stars: 4.5, count: 16 },
                         inStock: false,
-                    }
-                }
-            }
+                    },
+                },
+            };
 
             expect(getBasket(state)).toEqual([
                 {
@@ -60,8 +61,8 @@ describe('JT Vits', () => {
                     name: 'Floradix Liquid iron and vitamin formula 500ml',
                     quantity: 2,
                     subtotal: 35.78,
-                }
-            ])
-        })
+                },
+            ]);
+        });
     });
 });
